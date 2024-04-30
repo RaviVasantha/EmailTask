@@ -3,6 +3,7 @@ package com.example.demo;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,10 @@ public void saveCustomerData() {
 	catch(IOException ie) {
 		ie.printStackTrace();
 	}
-	
-	
 }
+public Iterable<Customer> getAllCustomers() {
+    return crp.findAll();
+}
+
+
 }
