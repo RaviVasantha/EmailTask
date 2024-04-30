@@ -35,8 +35,9 @@ public void saveCustomerData() {
 	}
 	catch(IOException ie) {
 		ie.printStackTrace();
-	}
-	
-	
+	}	
+}
+    public Iterable<Customer> getAllCustomers() {
+    return crp.findAll();
 }
 }
